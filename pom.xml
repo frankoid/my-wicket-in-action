@@ -14,12 +14,12 @@
 	<artifactId>asset-bank-addon-example</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	
-	<name>LIBRARY/PROJECT NAME</name>
-	<description>LIBRARY/PROJECT DESCRIPTION</description>
-	<inceptionYear>LIBRARY/PROJECT YEAR OF CREATION</inceptionYear>
+	<name>Asset Bank Addon Example</name>
+	<description>This is an example of / starting point for Java webapps that integrate with Asset Bank</description>
+	<inceptionYear>2012</inceptionYear>
 
     <scm>
-         <connection>ADD ME TO VERSION CONTROL AND PUT THE CONNECTION URL HERE</connection>
+        <connection>scm:git:ssh://git@github.com/brightinteractive/asset-bank-addon-example.git</connection>
     </scm>
 
     <dependencies>
@@ -30,6 +30,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-
 </project>
