@@ -6,7 +6,7 @@ Asset Bank. It's currently a work in progress. When it's finished it will
 demonstrate SSO (so that users can use their Asset Bank account in the addon
 app) and building using Maven.
 
-Wiki page: http://wiki.bright-interactive.com/display/knowhow/Asset+Bank+Add+On+Apps
+Wiki page: http://wiki.bright-interactive.com/display/knowhow/Asset+Bank+Addon+Apps
 
 
 Prerequisites
