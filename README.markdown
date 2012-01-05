@@ -23,7 +23,7 @@ To clone the repo:
 
     git clone git@github.com:brightinteractive/assetcloud.git
 
-To run the project (WON'T WORK YET - NO pom.xml YET):
+To run the project:
 
     mvn jetty:run
 
