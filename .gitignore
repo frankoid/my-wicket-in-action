@@ -2,3 +2,6 @@
 # These contain developer-specific state such as which windows are open
 # in IntelliJ so they should never be checked in.
 /.idea/workspace.xml
+
+# Maven build output directory
+/target
