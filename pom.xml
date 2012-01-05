@@ -25,11 +25,13 @@
 	</scm>
 
     <properties>
-		<!-- These Servlet / JSP versions are supported by Tomcat 5.x. We can
-		     use later versions if we don't need to support Tomcat 5.  See
-		     http://tomcat.apache.org/whichversion.html-->
-		<servlet.version>2.4</servlet.version>
-		<jsp.version>2.0</jsp.version>
+		<!-- Wicket 1.5 depends on servlet-api 2.5 (see
+		     apache-wicket-1.5.3/src/pom.xml), so we should depend on at
+		     least that version because Wicket 1.5 probably doesn't work with
+		     earlier versions. The earliest version of Tomcat that supports
+		     servlet 2.5 is Tomcat 6, i.e. this app probably won't run on
+		     Tomcat 5. See http://tomcat.apache.org/whichversion.html -->
+		<servlet.version>2.5</servlet.version>
 
         <jetty.version>8.0.4.v20111024</jetty.version>
 
@@ -51,12 +53,6 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>servlet-api</artifactId>
 			<version>${servlet.version}</version>
-            <scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jsp-api</artifactId>
-			<version>${jsp.version}</version>
             <scope>provided</scope>
 		</dependency>
 
