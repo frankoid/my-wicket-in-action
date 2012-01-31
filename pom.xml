@@ -7,7 +7,7 @@
 	<parent>
 		<artifactId>bright-parent</artifactId>
 		<groupId>com.brightinteractive</groupId>
-		<version>1.0.0</version>
+		<version>1.1.0-SNAPSHOT</version>
 	</parent>
 
 	<groupId>com.brightinteractive</groupId>
@@ -42,7 +42,6 @@
         <spring.version>3.1.0.RELEASE</spring.version>
         <postgresql-jdbc.version>9.1-901-1.jdbc4</postgresql-jdbc.version>
         <hibernate.version>3.6.9.Final</hibernate.version>
-        <spring-hibernate3.version>2.0.8</spring-hibernate3.version>
 		<commons-dbcp.version>1.4</commons-dbcp.version>
         <javax.inject.version>1</javax.inject.version>
     </properties>
@@ -92,8 +91,8 @@
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-hibernate3</artifactId>
-            <version>${spring-hibernate3.version}</version>
+            <artifactId>spring-orm</artifactId>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -106,6 +105,20 @@
             <version>${spring.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.5.3</version>
+        </dependency>
+
+        <!-- Spring (test scope) -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.version}</version>
+            <scope>test</scope>
+        </dependency>
+
 		<!-- JSR330 -->
         <dependency>
             <groupId>javax.inject</groupId>
@@ -114,6 +127,12 @@
         </dependency>
 
 		<!-- Hibernate -->
+        <dependency>
+            <groupId>com.brightinteractive</groupId>
+            <artifactId>bright-hibernate</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
@@ -156,6 +175,31 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>2.11</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>integration-test</goal>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <!--
+                        Don't write test reports to text files, write them to
+                        the console instead. That way you get a stack trace
+                        that is clickable in IntelliJ if a test fails.
+
+                        Test reports are still written as XML to
+                        target/surefire-reports/.
+                    -->
+                    <useFile>false</useFile>
+                </configuration>
+            </plugin>
+
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>hibernate3-maven-plugin</artifactId>

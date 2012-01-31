@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2012 Bright Interactive, All Rights Reserved. -->
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+
+        <!--<mapping class="com.brightinteractive.abaddon.example.Widget"/>-->
+
+        <!-- List of packages with package-info.java -->
+        <!-- <mapping package="com.brightinteractive.abaddon.example"/> -->
+    </session-factory>
+</hibernate-configuration>

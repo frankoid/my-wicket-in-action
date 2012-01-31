@@ -12,8 +12,9 @@ Wiki page: http://wiki.bright-interactive.com/display/knowhow/Asset+Bank+Addon+A
 Prerequisites
 -------------
 
-* Java 1.6
+* Java 1.6 or 1.7
 * Maven (2.2.1 or 3.0.3)
+* PostgreSQL 9.1 (earlier or later versions may also work)
 
 
 Installation
@@ -23,13 +24,23 @@ To clone the repo:
 
     git clone git@github.com:brightinteractive/assetcloud.git
 
+To create the PostgreSQL user and database:
+
+    psql91 -U postgres -c "CREATE ROLE asset_bank_addon_example PASSWORD 'password' CREATEDB LOGIN"
+    psql91 -U asset_bank_addon_example -d postgres -c "CREATE DATABASE asset_bank_addon_example"
+    mvn hibernate3:hbm2ddl
+
 To run the project:
 
     mvn jetty:run
 
-To run the tests:
+To run the unit tests:
 
 	mvn test
+
+To run the integration tests:
+
+    mvn verify
 
 Continuous Integration
 ----------------------
