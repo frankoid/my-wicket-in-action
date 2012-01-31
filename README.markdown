@@ -30,3 +30,8 @@ To run the project:
 To run the tests:
 
 	mvn test
+
+Continuous Integration
+----------------------
+
+http://jenkins.bright-interactive.com/job/Asset%20Bank%20Addon%20Example/
