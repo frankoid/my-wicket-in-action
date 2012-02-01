@@ -28,13 +28,13 @@ To create the PostgreSQL user and database (Mac OS X, postgresql91-server MacPor
 
     psql91 -U postgres -c "CREATE ROLE asset_bank_addon_example PASSWORD 'password' CREATEDB LOGIN"
     psql91 -U asset_bank_addon_example -d postgres -c "CREATE DATABASE asset_bank_addon_example"
-    mvn hibernate3:hbm2ddl
+    mvn compile hibernate3:hbm2ddl
 
 To create the PostgreSQL user and database (Debian Squeeze X, postgresql84-server package installed, */etc/postgresql/8.4/main/pg_hba.conf edited to allow md5 authentication instead of ident* (see http://www.stuartellis.eu/articles/postgresql-setup/) and /etc/init.d/postgres started):
 
     psql -U postgres -c "CREATE ROLE asset_bank_addon_example ENCRYPTED PASSWORD 'password' CREATEDB LOGIN"
     psql -U asset_bank_addon_example -d postgres -c "CREATE DATABASE asset_bank_addon_example"
-    mvn hibernate3:hbm2ddl
+    mvn compile hibernate3:hbm2ddl
 
 To run the project:
 

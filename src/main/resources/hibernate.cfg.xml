@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright 2012 Bright Interactive, All Rights Reserved. -->
+
+<!-- Note: we use this file instead of just putting everything into spring-context.xml to allow the hibernate3:hbm2ddl Maven goal to work - it doesn't know about the Spring context, it just loads Hibernate config from this file.
+-->
+
 <!DOCTYPE hibernate-configuration PUBLIC
     "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
     "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
@@ -7,9 +11,9 @@
     <session-factory>
         <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
 
-        <!--<mapping class="com.brightinteractive.abaddon.example.Widget"/>-->
+        <mapping class="com.brightinteractive.abaddon.example.model.Widget"/>
 
         <!-- List of packages with package-info.java -->
-        <!-- <mapping package="com.brightinteractive.abaddon.example"/> -->
+        <!-- <mapping package="com.brightinteractive.abaddon.example.model"/> -->
     </session-factory>
 </hibernate-configuration>
