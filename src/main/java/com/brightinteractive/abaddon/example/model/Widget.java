@@ -48,13 +48,13 @@ public class Widget
     public boolean equals(Object o)
     {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Widget)) return false;
 
         Widget widget = (Widget) o;
 
-        if (id != null ? !id.equals(widget.id) : widget.id != null) return false;
-        return !(name != null ? !name.equals(widget.name) : widget.name != null);
-
+        // If o is a Hibernate proxy then accessing its fields directly may return null, so we use getters instead.
+        if (id != null ? !id.equals(widget.getId()) : widget.getId() != null) return false;
+        return !(name != null ? !name.equals(widget.getName()) : widget.getName() != null);
     }
 
     @Override
@@ -63,5 +63,14 @@ public class Widget
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Widget {" +
+               "id=" + id +
+               ", name='" + name + '\'' +
+               '}';
     }
 }

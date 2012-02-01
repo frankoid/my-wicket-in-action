@@ -39,7 +39,9 @@
     <!-- ensure that the above transactional advice runs for any execution
          of an operation defined in a service.*Manager class -->
     <aop:config>
-        <aop:pointcut id="managerOperation" expression="execution(* com.brightinteractive.abaddon.example..*Manager.*(..))"/>
+        <aop:pointcut id="managerOperation"
+                      expression="execution(* com.brightinteractive.abaddon.example..*Manager.*(..)) ||
+                                  execution(* com.brightinteractive.abaddon.example..*ManagerImpl.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="managerOperation"/>
     </aop:config>
 

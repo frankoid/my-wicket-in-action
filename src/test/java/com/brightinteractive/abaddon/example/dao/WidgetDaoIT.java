@@ -6,14 +6,11 @@ package com.brightinteractive.abaddon.example.dao;
 
 import javax.annotation.Resource;
 
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.brightinteractive.abaddon.example.model.Widget;
+import com.brightinteractive.abaddon.example.test.AddonExampleIT;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -21,11 +18,8 @@ import static org.junit.Assert.assertTrue;
 /**
  * @author Bright Interactive
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath:com/brightinteractive/abaddon/example/spring-context.xml" })
-@TransactionConfiguration(transactionManager = "txManager")
 @Transactional
-public class WidgetDaoIT
+public class WidgetDaoIT extends AddonExampleIT
 {
     @Resource
     private WidgetDao widgetDao;
