@@ -11,8 +11,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
 
-import org.hibernate.SessionFactory;
-
 import com.brightinteractive.abaddon.example.model.Widget;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -29,8 +27,6 @@ import static org.junit.Assert.assertTrue;
 @Transactional
 public class WidgetDaoIT
 {
-    @Resource
-    private SessionFactory sessionFactory;
     @Resource
     private WidgetDao widgetDao;
 
