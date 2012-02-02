@@ -8,12 +8,12 @@
           <element id="module-output" name="asset-bank-addon-example" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: org.apache.wicket:wicket-core:1.5.3" />
-          <element id="library" level="project" name="Maven: org.apache.wicket:wicket-util:1.5.3" />
+          <element id="library" level="project" name="Maven: org.apache.wicket:wicket-core:1.5.4" />
+          <element id="library" level="project" name="Maven: org.apache.wicket:wicket-util:1.5.4" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.1" />
-          <element id="library" level="project" name="Maven: org.apache.wicket:wicket-request:1.5.3" />
-          <element id="library" level="project" name="Maven: org.apache.wicket:wicket-spring:1.5.3" />
-          <element id="library" level="project" name="Maven: org.apache.wicket:wicket-ioc:1.5.3" />
+          <element id="library" level="project" name="Maven: org.apache.wicket:wicket-request:1.5.4" />
+          <element id="library" level="project" name="Maven: org.apache.wicket:wicket-spring:1.5.4" />
+          <element id="library" level="project" name="Maven: org.apache.wicket:wicket-ioc:1.5.4" />
           <element id="library" level="project" name="Maven: cglib:cglib:2.2" />
           <element id="library" level="project" name="Maven: asm:asm:3.1" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:3.1.0.RELEASE" />
