@@ -5,8 +5,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<artifactId>bright-webapp-parent</artifactId>
 		<groupId>com.brightinteractive</groupId>
+		<artifactId>bright-webapp-parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
         <relativePath>../libs/bright-webapp-parent</relativePath>
 	</parent>
