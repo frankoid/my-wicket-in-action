@@ -39,6 +39,13 @@ public class WidgetsPageIT extends AddonExampleWicketIT
         tester.assertListView("widgetList:widgetRows", allWidgets);
     }
 
+    @Test
+    public void testMoreThanOneTest()
+    {
+        // the mere presence of this test causes an exception without the @DirtiesContext annotation on
+        // AddonExampleWicketIT
+    }
+
     private void createWidget()
     {
         Widget widget = new Widget();
