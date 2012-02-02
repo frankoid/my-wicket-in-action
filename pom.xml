@@ -5,9 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<artifactId>bright-parent</artifactId>
+		<artifactId>bright-webapp-parent</artifactId>
 		<groupId>com.brightinteractive</groupId>
-		<version>1.1.0-SNAPSHOT</version>
+		<version>1.0.0-SNAPSHOT</version>
+        <relativePath>../libs/bright-webapp-parent</relativePath>
 	</parent>
 
 	<groupId>com.brightinteractive</groupId>
@@ -32,8 +33,6 @@
 		     servlet 2.5 is Tomcat 6, i.e. this app probably won't run on
 		     Tomcat 5. See http://tomcat.apache.org/whichversion.html -->
 		<servlet.version>2.5</servlet.version>
-
-        <jetty.version>8.0.4.v20111024</jetty.version>
 
         <slf4j-log4j12.version>1.6.4</slf4j-log4j12.version>
         <log4j12.version>1.2.16</log4j12.version>
@@ -181,42 +180,6 @@
     <build>
         <plugins>
             <plugin>
-                <!--
-                    This plugin runs integration tests. By default it looks
-                    for test classes with the following wildcard patterns:
-                    
-                    **/IT*.java
-                    **/*IT.java
-                    **/*ITCase.java
-                    
-                    (this is documented at
-                    http://maven.apache.org/plugins/maven-failsafe-plugin/examples/inclusion-exclusion.html).
-                -->
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>2.11</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>integration-test</goal>
-                            <goal>verify</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <!--
-                        Don't write test reports to text files, write them to
-                        the console instead. That way you get a stack trace
-                        that is clickable in IntelliJ if a test fails.
-
-                        Test reports are still written as XML to
-                        target/surefire-reports/.
-                    -->
-                    <useFile>false</useFile>
-                </configuration>
-            </plugin>
-
-            <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>hibernate3-maven-plugin</artifactId>
                 <version>2.2</version>
@@ -241,18 +204,11 @@
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>${jetty.version}</version>
                 <configuration>
-                    <scanIntervalSeconds>5</scanIntervalSeconds>
                     <connectors>
                         <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
                             <port>9080</port>
-                            <maxIdleTime>60000</maxIdleTime>
                         </connector>
                     </connectors>
-                    <webAppConfig>
-                        <contextPath>/</contextPath>
-                    </webAppConfig>
-                    <stopKey/>
-                    <stopPort/>
                     <systemProperties>
                         <systemProperty>
                             <name>wicket.configuration</name>
