@@ -253,6 +253,12 @@
                     </webAppConfig>
                     <stopKey/>
                     <stopPort/>
+                    <systemProperties>
+                        <systemProperty>
+                            <name>wicket.configuration</name>
+                            <value>development</value>
+                        </systemProperty>
+                    </systemProperties>
                 </configuration>
             </plugin>
         </plugins>
