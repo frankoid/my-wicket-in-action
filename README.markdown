@@ -22,7 +22,7 @@ Installation
 
 To clone the repo:
 
-    git clone git@github.com:brightinteractive/assetcloud.git
+    git clone git@github.com:brightinteractive/asset-bank-addon-example.git
 
 To create the PostgreSQL user and database (Mac OS X, postgresql91-server MacPort installed and loaded):
 
