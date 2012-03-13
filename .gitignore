@@ -9,3 +9,6 @@
 /logs
 # Maven build output directory
 /target
+
+# Emacs TAGS files
+TAGS
