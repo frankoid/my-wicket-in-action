@@ -4,15 +4,16 @@
 
 package com.brightinteractive.wicket.experiments.test;
 
+import static org.springframework.test.annotation.DirtiesContext.ClassMode.*;
+
 import javax.annotation.Resource;
 
 import org.springframework.test.annotation.DirtiesContext;
 
-import com.brightinteractive.wicket.experiments.ui.WicketApplication;
 import org.apache.wicket.util.tester.WicketTester;
 import org.junit.Before;
 
-import static org.springframework.test.annotation.DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD;
+import com.brightinteractive.wicket.experiments.ui.WicketApplication;
 
 /**
  * <p>Base class for integration tests of Wicket pages.</p>
@@ -33,9 +34,9 @@ import static org.springframework.test.annotation.DirtiesContext.ClassMode.AFTER
 // 	at org.apache.wicket.util.tester.BaseWicketTester.<init>(BaseWicketTester.java:297)
 // 	at org.apache.wicket.util.tester.BaseWicketTester.<init>(BaseWicketTester.java:247)
 // 	at org.apache.wicket.util.tester.WicketTester.<init>(WicketTester.java:196)
-// 	at com.brightinteractive.abaddon.example.test.AddonExampleWicketIT.createWicketTester(AddonExampleWicketIT.java:32)
+// 	at com.brightinteractive.abaddon.example.test.WicketExperimentsWicketIT.createWicketTester(WicketExperimentsWicketIT.java:32)
 @DirtiesContext(classMode = AFTER_EACH_TEST_METHOD)
-public abstract class AddonExampleWicketIT extends AddonExampleIT
+public abstract class WicketExperimentsWicketIT extends WicketExperimentsIT
 {
     protected WicketTester tester;
 

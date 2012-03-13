@@ -18,6 +18,6 @@ import org.junit.runner.RunWith;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:com/brightinteractive/wicket/experiments/spring-context.xml" })
 @TransactionConfiguration(transactionManager = "txManager")
-public abstract class AddonExampleIT
+public abstract class WicketExperimentsIT
 {
 }
