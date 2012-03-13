@@ -9,7 +9,6 @@ import org.apache.wicket.markup.html.WebPage;
 /**
  * @author Bright Interactive
  */
-public class ShowAssetBankUserPage extends WebPage
+public class HomePage extends WebPage
 {
-
 }

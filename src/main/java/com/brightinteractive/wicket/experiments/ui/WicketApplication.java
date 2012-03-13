@@ -34,14 +34,12 @@ public class WicketApplication
     {
         super.init();
 
-        mountPage("/widgets", WidgetsPage.class);
-
         getComponentInstantiationListeners().add(new SpringComponentInjector(this, applicationContext));
     }
 
     @Override
 	public Class<? extends Page> getHomePage()
 	{
-		return ShowAssetBankUserPage.class;
+		return HomePage.class;
 	}
 }
