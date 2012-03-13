@@ -13,9 +13,9 @@
     <session-factory>
         <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
 
-        <mapping class="com.brightinteractive.abaddon.example.model.Widget"/>
+        <mapping class="com.brightinteractive.wicket.experiments.model.Widget"/>
 
         <!-- List of packages with package-info.java -->
-        <!-- <mapping package="com.brightinteractive.abaddon.example.model"/> -->
+        <!-- <mapping package="com.brightinteractive.wicket.experiments.model"/> -->
     </session-factory>
 </hibernate-configuration>

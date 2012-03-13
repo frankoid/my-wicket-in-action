@@ -12,17 +12,17 @@
 	</parent>
 
 	<groupId>com.brightinteractive</groupId>
-	<artifactId>asset-bank-addon-example</artifactId>
+	<artifactId>wicket-experiments</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 
 	<packaging>war</packaging>
 
-	<name>Asset Bank Addon Example</name>
-	<description>This is an example of / starting point for Java webapps that integrate with Asset Bank</description>
+	<name>Wicket Experiments</name>
+	<description>Sandbox for trying things out with Apache Wicket</description>
 	<inceptionYear>2012</inceptionYear>
 
 	<scm>
-		<connection>scm:git:ssh://git@github.com/brightinteractive/asset-bank-addon-example.git</connection>
+		<connection>scm:git:ssh://git@github.com/brightinteractive/wicket-experiments.git</connection>
 	</scm>
 
     <properties>
