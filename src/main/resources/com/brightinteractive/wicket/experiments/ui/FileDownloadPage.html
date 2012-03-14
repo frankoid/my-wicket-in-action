@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:wicket="http://wicket.apache.org">
+    <body>
+        <wicket:extend>
+            <form wicket:id="fileDownloadForm">
+                <label for="fileContents"><wicket:message key="file.contents" /></label>
+                <input wicket:id="fileContents" id="fileContents" type="text" size="40"/>
+                <input type="submit" wicket:message="value:download" />
+            </form>
+        </wicket:extend>
+    </body>
+</html>

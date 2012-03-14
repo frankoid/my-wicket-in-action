@@ -35,6 +35,8 @@ public class WicketApplication
         super.init();
 
         getComponentInstantiationListeners().add(new SpringComponentInjector(this, applicationContext));
+
+		mountPage("file-download", FileDownloadPage.class);
     }
 
     @Override

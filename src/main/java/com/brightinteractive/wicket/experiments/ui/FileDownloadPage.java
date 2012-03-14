@@ -7,6 +7,10 @@ package com.brightinteractive.wicket.experiments.ui;
 /**
  * @author Bright Interactive
  */
-public class HomePage extends WicketExperimentsPage
+public class FileDownloadPage extends WicketExperimentsPage
 {
+	public FileDownloadPage()
+	{
+		add(new FileDownloadForm("fileDownloadForm"));
+	}
 }
