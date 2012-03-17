@@ -5,6 +5,7 @@ package com.brightinteractive.wicket.experiments.ui;
  */
 
 import org.apache.wicket.markup.html.form.Form;
+import org.apache.wicket.markup.html.form.TextArea;
 import org.apache.wicket.markup.html.form.TextField;
 import org.apache.wicket.model.CompoundPropertyModel;
 import org.apache.wicket.model.Model;
@@ -22,7 +23,11 @@ public class FileDownloadForm extends Form<FileDownloadFormModel>
 	{
 		super(id, new CompoundPropertyModel<FileDownloadFormModel>(new FileDownloadFormModel()));
 
-		add(new TextField<String>("fileContents").setRequired(true).setLabel(
+        add(new TextField<String>("fileName").setRequired(true).setLabel(
+            new Model<String>("File name")));
+        add(new TextField<String>("contentType").setRequired(true).setLabel(
+            new Model<String>("Content type")));
+		add(new TextArea<String>("fileContents").setRequired(true).setLabel(
 			new Model<String>("String")));
 	}
 
@@ -32,16 +37,17 @@ public class FileDownloadForm extends Form<FileDownloadFormModel>
 		FileDownloadFormModel model = this.getModelObject();
 		info("fileContents = " + model.getFileContents());
 
-        IResourceStream resourceStream = createResourceStreamWithContents(model.getFileContents());
+        IResourceStream resourceStream = createResourceStream();
         getRequestCycle().scheduleRequestHandlerAfterCurrent(
-            new ResourceStreamRequestHandler(resourceStream, "yourfile.txt")
+            new ResourceStreamRequestHandler(resourceStream, getModelObject().getFileName())
                 .setContentDisposition(ContentDisposition.ATTACHMENT)
 //                .setCacheDuration(cacheDuration)
         );
 	}
 
-    private IResourceStream createResourceStreamWithContents(String contents)
+    private IResourceStream createResourceStream()
     {
-        return new StringResourceStream(contents, "text/plain");
+        return new StringResourceStream(getModelObject().getFileContents(),
+                                        getModelObject().getContentType());
     }
 }

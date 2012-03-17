@@ -4,9 +4,24 @@
     <body>
         <wicket:extend>
             <form wicket:id="fileDownloadForm">
-                <label for="fileContents"><wicket:message key="file.contents" /></label>
-                <input wicket:id="fileContents" id="fileContents" type="text" size="40"/>
-                <input type="submit" wicket:message="value:download" />
+                <table>
+                    <tr>
+                        <td><label for="fileName"><wicket:message key="file.name" /></label></td>
+                        <td><input wicket:id="fileName" id="fileName" type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="contentType"><wicket:message key="content.type" /></label></td>
+                        <td><input wicket:id="contentType" id="contentType" type="text"/></td>
+                    </tr>
+                    <tr>
+                        <td><label for="fileContents"><wicket:message key="file.contents" /></label></td>
+                        <td><textarea wicket:id="fileContents" id="fileContents"/></td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2"><input type="submit" wicket:message="value:download" /></td>
+                    </tr>
+                </table>
             </form>
         </wicket:extend>
     </body>
