@@ -4,10 +4,12 @@ package com.brightinteractive.wicket.experiments.ui;
  * Copyright 2012 Bright Interactive, All Rights Reserved.
  */
 
+import java.io.Serializable;
+
 /**
  * @author Bright Interactive
  */
-public class FileDownloadFormModel
+public class FileDownloadFormModel implements Serializable
 {
 	private String fileContents;
 
