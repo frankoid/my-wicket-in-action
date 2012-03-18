@@ -222,6 +222,8 @@
                             <value>development</value>
                         </systemProperty>
                     </systemProperties>
+                    <stopKey>WOA6nuf5</stopKey>
+                    <stopPort>9081</stopPort>
                 </configuration>
             </plugin>
         </plugins>
