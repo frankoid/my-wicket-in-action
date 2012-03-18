@@ -4,6 +4,9 @@ package com.brightinteractive.wicket.experiments.ui;
  * Copyright 2012 Bright Interactive, All Rights Reserved.
  */
 
+import com.brightinteractive.common.lang.ClassUtil;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.wicket.markup.html.form.Form;
 import org.apache.wicket.markup.html.form.TextArea;
 import org.apache.wicket.markup.html.form.TextField;
@@ -19,6 +22,8 @@ import org.apache.wicket.util.resource.StringResourceStream;
  */
 public class FileDownloadForm extends Form<FileDownloadFormModel>
 {
+    private static Log log = LogFactory.getLog(ClassUtil.currentClassName());
+
 	public FileDownloadForm(String id)
 	{
 		super(id, new CompoundPropertyModel<FileDownloadFormModel>(new FileDownloadFormModel()));
@@ -35,7 +40,7 @@ public class FileDownloadForm extends Form<FileDownloadFormModel>
 	protected void onSubmit()
 	{
 		FileDownloadFormModel model = this.getModelObject();
-		info("fileContents = " + model.getFileContents());
+		log.info("fileContents = " + model.getFileContents());
 
         IResourceStream resourceStream = createResourceStream();
         getRequestCycle().scheduleRequestHandlerAfterCurrent(

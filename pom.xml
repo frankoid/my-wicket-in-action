@@ -149,6 +149,13 @@
             <version>${commons-dbcp.version}</version>
         </dependency>
 
+        <!-- Misc -->
+        <dependency>
+            <groupId>com.brightinteractive</groupId>
+            <artifactId>bright-common</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+
 		<!-- JDBC Drivers -->
         <dependency>
             <groupId>postgresql</groupId>
