@@ -10,6 +10,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 import org.devrx.wicketinaction.ch1.AjaxLinkCounter;
+import org.devrx.wicketinaction.ch1.EchoPage;
 import org.devrx.wicketinaction.ch1.LinkCounter;
 
 import org.apache.wicket.Page;
@@ -41,6 +42,7 @@ public class WicketApplication
 
         mountPage("ch1/link-counter", LinkCounter.class);
         mountPage("ch1/ajax-link-counter", AjaxLinkCounter.class);
+        mountPage("ch1/echo", EchoPage.class);
     }
 
     @Override
