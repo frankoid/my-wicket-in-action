@@ -38,12 +38,12 @@ public class WicketApplication
 
         getComponentInstantiationListeners().add(new SpringComponentInjector(this, applicationContext));
 
-		mountPage("ch1/link-counter", LinkCounter.class);
+        mountPage("ch1/link-counter", LinkCounter.class);
     }
 
     @Override
-	public Class<? extends Page> getHomePage()
-	{
-		return HomePage.class;
-	}
+    public Class<? extends Page> getHomePage()
+    {
+        return HomePage.class;
+    }
 }
