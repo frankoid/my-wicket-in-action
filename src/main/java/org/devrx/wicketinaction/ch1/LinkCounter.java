@@ -12,6 +12,7 @@ import org.apache.wicket.model.PropertyModel;
 
 public class LinkCounter extends BasePage
 {
+    @SuppressWarnings("unused") // read by Wicket
     private int counter = 0;
 
     public LinkCounter()
