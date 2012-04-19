@@ -18,7 +18,7 @@
       </option>
       <option name="myRunnerSettings">
         <MavenRunnerSettings>
-          <option name="jreName" value="1.7" />
+          <option name="jreName" value="1.6" />
           <option name="mavenProperties">
             <map />
           </option>
@@ -29,26 +29,22 @@
       </option>
       <option name="myRunnerParameters">
         <MavenRunnerParameters>
+          <option name="profiles">
+            <set />
+          </option>
           <option name="goals">
             <list>
-              <option value="test" />
               <option value="jetty:run" />
             </list>
           </option>
-          <option name="profiles">
-            <set />
+          <option name="profilesMap">
+            <map />
           </option>
           <option name="workingDirPath" value="$PROJECT_DIR$" />
         </MavenRunnerParameters>
       </option>
     </MavenSettings>
-    <RunnerSettings RunnerId="Debug">
-      <option name="DEBUG_PORT" value="" />
-      <option name="TRANSPORT" value="0" />
-      <option name="LOCAL" value="true" />
-    </RunnerSettings>
     <RunnerSettings RunnerId="Run" />
-    <ConfigurationWrapper RunnerId="Debug" />
     <ConfigurationWrapper RunnerId="Run" />
     <method />
   </configuration>

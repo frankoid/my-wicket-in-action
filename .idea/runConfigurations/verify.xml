@@ -18,7 +18,7 @@
       </option>
       <option name="myRunnerSettings">
         <MavenRunnerSettings>
-          <option name="jreName" value="1.7" />
+          <option name="jreName" value="1.6" />
           <option name="mavenProperties">
             <map />
           </option>
@@ -29,13 +29,16 @@
       </option>
       <option name="myRunnerParameters">
         <MavenRunnerParameters>
+          <option name="profiles">
+            <set />
+          </option>
           <option name="goals">
             <list>
               <option value="verify" />
             </list>
           </option>
-          <option name="profiles">
-            <set />
+          <option name="profilesMap">
+            <map />
           </option>
           <option name="workingDirPath" value="$PROJECT_DIR$" />
         </MavenRunnerParameters>
